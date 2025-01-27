@@ -10,7 +10,7 @@ API_KEY = 'cc528a70f07e7e58bc543b6f39e5986a'
 
 CITIES = ['Paris', 'London', 'Tokyo', 'Melbourne', 'Bali']  
 
-KAFKA_TOPIC = 'tp-meteo'
+KAFKA_TOPIC = 'topic-weather'
 
 # Adresse du serveur Kafka
 KAFKA_SERVER = 'localhost:9092'

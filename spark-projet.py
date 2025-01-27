@@ -49,7 +49,7 @@ df = (
     spark.readStream
     .format("kafka")
     .option("kafka.bootstrap.servers", "localhost:9092")
-    .option("subscribe", "tp-meteo")
+    .option("subscribe", "topic-weather")
     .option("startingOffsets", "earliest")
     .load()
 )
@@ -131,7 +131,7 @@ query = (kafka_output_df
     .format("kafka")
     .outputMode("append")
     .option("kafka.bootstrap.servers", "localhost:9092")  # Adresse du broker Kafka
-    .option("topic", "tp-meteo-final")                   # Nom du topic Kafka de destination
+    .option("topic", "topic-weather-final")                   # Nom du topic Kafka de destination
     .option("checkpointLocation", "/tmp/checkpoints")    # Emplacement des checkpoints
     .start())
 

@@ -1,20 +1,16 @@
-Merci pour la précision ! Voici une version mise à jour qui reflète votre rôle en tant qu'étudiant :
-
----
-
 # Projet Individuel - Real Time Data Streaming
 
 ## Contexte
 Ce projet est réalisé dans le cadre de mes études et vise à mettre en œuvre un pipeline de traitement de données en temps réel. Le but est de collecter, traiter et analyser des données météo issues de l'API OpenWeatherMap, en exploitant les outils Kafka et Spark Streaming pour fournir un système fonctionnel et optimisé.
 
----
+
 
 ## Objectifs
 1. **Collecte des données** : Intégrer l'API OpenWeatherMap pour récupérer des informations météo en temps réel et les envoyer dans un topic Kafka nommé `topic-weather`.
 2. **Traitement en temps réel** : Utiliser Spark Streaming pour transformer les données, enrichir leur contenu, et les publier dans un topic Kafka nommé `topic-weather-final`.
 3. **Pipeline opérationnel** : Créer un système robuste et documenté qui assure un fonctionnement fiable de bout en bout.
 
----
+
 
 ## Installation et Configuration
 
@@ -86,7 +82,7 @@ Ce projet est réalisé dans le cadre de mes études et vise à mettre en œuvre
    python3.10 -m pip install kafka-python
    ```
 
----
+
 
 ## Exécution du Projet
 
@@ -100,7 +96,6 @@ Ce projet est réalisé dans le cadre de mes études et vise à mettre en œuvre
    $SPARK_HOME/bin/spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.2.3 spark.py
    ```
 
----
 
 ## Fonctionnalités Clés
 - **Collecte en temps réel** : Exploitation de l'API OpenWeatherMap pour des données météo actualisées.

@@ -8,7 +8,6 @@ from pyspark.sql.functions import (
 # ---------------------------------------------------------------------------
 # Étape 1 : Configuration de Spark
 # ---------------------------------------------------------------------------
-# Modifier "tp-esme" par le nom de votre répertoire GitHub ou chemin local
 os.environ["SPARK_HOME"] = "/workspaces/Tp_meteo_kafka/spark-3.2.3-bin-hadoop2.7"
 
 spark = SparkSession.builder \
@@ -46,7 +45,6 @@ weather_schema = StructType([
 # ---------------------------------------------------------------------------
 # Étape 3 : Lecture des données en streaming depuis Kafka
 # ---------------------------------------------------------------------------
-# Remplacer "tp-meteo" par le nom du topic que vous souhaitez utiliser
 df = (
     spark.readStream
     .format("kafka")
@@ -107,7 +105,6 @@ processed_df = processed_df.withColumn(
 # ---------------------------------------------------------------------------
 # Étape 6 : Transformation des données en JSON pour Kafka
 # ---------------------------------------------------------------------------
-# Ajouter toutes les variables calculées
 kafka_output_df = processed_df.select(
     to_json(struct(
         col("date"),
@@ -129,7 +126,6 @@ kafka_output_df = processed_df.select(
 # ---------------------------------------------------------------------------
 # Étape 7 : Écriture des résultats dans un topic Kafka
 # ---------------------------------------------------------------------------
-# Remplacer "tp-meteo-final" par le nom du topic Kafka où envoyer les données
 query = (kafka_output_df
     .writeStream
     .format("kafka")

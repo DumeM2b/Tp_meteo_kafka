@@ -70,7 +70,7 @@ Ce projet est réalisé dans le cadre de mes études et vise à mettre en œuvre
 
 2. Configurez Spark :
    ```bash
-   export SPARK_HOME=/chemin/vers/spark-3.2.3-bin-hadoop2.7
+   export SPARK_HOME=/workspaces/Tp_meteo_kafka/spark-3.2.3-bin-hadoop2.7
    export PATH=$SPARK_HOME/bin:$PATH
    ```
 
